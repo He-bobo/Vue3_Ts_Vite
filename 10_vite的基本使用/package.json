@@ -1,0 +1,27 @@
+{
+  "name": "leran_vite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vite",
+    "build":"vite build",
+    "preview":"vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.4",
+    "@vue/compiler-sfc": "^3.1.2",
+    "less": "^4.1.1",
+    "postcss": "^8.3.5",
+    "postcss-preset-env": "^6.7.0",
+    "vite": "^2.3.8",
+    "vue": "^3.1.2"
+  }
+}

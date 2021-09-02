@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+    <div id="app"></div>
+    <template id="my-app">
+      <button @click="changeFullName">修改fullName</button>
+        <h2>{{fullName}}</h2>
+
+
+    </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    Vue.createApp({
+      template:'#my-app',
+      data:function(){
+        return{
+          firstName:'kobe',
+          lastName:'Bryant',
+          score:80,
+          message:'Hello World'
+        }
+      },
+      computed:{
+        //fullName的getter方法
+        // fullName(){
+        // console.log('computed');
+        //   return this.firstName+" "+this.lastName  
+        // }
+
+        //fullName的getter和setter方法
+        fullName:{
+          get:function(){
+            return this.firstName+" "+this.lastName  
+          },
+          set:function(newValue){
+            console.log('newValue: ', newValue);
+            return this.firstName=newValue
+          }
+        }
+      },
+      methods:{
+        changeFullName(){
+          this.fullName='xufanghe'
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>
